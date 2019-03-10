@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= title ;%></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Quicksand|Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/highlightjs.css">
+
+    <!-- highlightjs -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/go.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </head>
+<body>
+<!-- body beginning -->
+<ul class="nav justify-content-center pt-2">
+  <li class="nav-item">
+    <a class="nav-link active" href="/"><i data-toggle="tooltip" data-placement="bottom" title="Home" class="fas fa-home"></i></a>
+  </li>
+  <% if (!session) { %>
+  <li class="nav-item">
+    <a class="nav-link" href="/register"><i data-toggle="tooltip" data-placement="bottom" title="Register" class="fas fa-plus"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/login"><i data-toggle="tooltip" data-placement="bottom" title="Login" class="fas fa-user"></i></a>
+  </li>
+  <% } %>
+  <% if (session) { %>
+  <li class="nav-item">
+    <a class="nav-link" href="/dashboard"><i data-toggle="tooltip" data-placement="bottom" title="Dashboard" class="fas fa-bars"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/dashboard/create"><i data-toggle="tooltip" data-placement="bottom" title="Create snippet" class="fas fa-plus"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/logout"><i data-toggle="tooltip" data-placement="bottom" title="Logout" class="fas fa-sign-out-alt"></i></a>
+  </li>
+  <% } %>
+</ul>
+<hr/>
+<%- include ./flash ;%>

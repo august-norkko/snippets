@@ -1,0 +1,5 @@
+<% Object.keys(messages).forEach(type => { %>
+  <div class="text-success pt-4">
+    <h5 class="<%= type %>"><% messages[type].forEach(message => { %><%= message %><br/><% }) %></h5> 
+  </div>
+<% }) %>

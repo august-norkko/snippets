@@ -1,0 +1,51 @@
+html, body {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #e3e7ea;
+    color: #000;
+}
+
+.error { color: red !important;}
+.png { width: 40px; height: 40px; }
+.png-large { width: 65px; height: 65px; }
+.png-small { width: 35px; height: 35px; }
+.png:hover, .png-large:hover, .png-small:hover {
+    opacity: 0.3;
+}
+
+.snippet-div {
+    width: auto;
+    height: auto;
+    height: auto;
+    display: inline-block;
+    text-align: start;
+    vertical-align: top;
+    padding: 5px;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-break: keep-all;
+    text-align: left;
+    max-height: 250px;
+    max-width: 600px;
+}
+
+.item {
+    font-size: 1rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.fas { color: #000; font-size: 24px; opacity: 0.8; }
+.far { color: #000; font-size: 20px; opacity: 0.8; }
+.far:hover, .fas:hover { opacity: 0.2; }
+
+h1, h2, h3, h4, h5, .quicksand { font-family: 'Quicksand', sans-serif !important; }
+.raleway { font-family: 'Raleway', sans-serif !important; }
+.codefont { font-family: 'Inconsolata', monospace; }

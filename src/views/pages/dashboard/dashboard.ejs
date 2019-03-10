@@ -1,0 +1,23 @@
+<%- include ../../partials/head ;%>
+<% if (obj != null) { %>
+  <% let arr = obj.snippets %>
+  <% if (arr.length === 0) { %>
+  <h2 class="m-5">No snippets!</h2>
+  <% } %>
+  <% for (let i = 0; i < arr.length; i++) { %>
+    <div class="snippet-div">
+      <% for (let x = 0; x < arr[i][1].length; x++) { %>
+        <a class="badge badge-light"><%= arr[i][1][x] %></a>
+      <% } %>
+      <pre class="item" count="<%= i  %>" readonly><code class="<%= arr[i][1][0] %> codefont"><%= arr[i][0] %></code></pre>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <a data-toggle="tooltip" data-placement="bottom" title="Edit" href="dashboard/edit/<%= i %>"><i class="far fa-edit"></i></a>
+            <a data-toggle="tooltip" data-placement="bottom" title="Remove" href="dashboard/delete/<%= i %>"><i class="fas fa-minus pl-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>   
+  <% } %>
+<% } %>

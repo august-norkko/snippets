@@ -1,0 +1,19 @@
+<%- include ../partials/head ;%>
+<% if (obj.length > 0) { %>
+  <% for (let i = 0; i < obj.length; i++) { %> 
+    <% let arr = obj[i].snippets %>
+    <% for (let x = 0; x < obj[i].snippets.length; x++) { %>
+        <div class="snippet-div">
+          <a class="text-primary quicksand"><%= obj[i].username %></a>
+          <% arr[x][1].forEach( e => { %>
+              <a class="badge badge-light"><%= e %></a>
+          <% }) %>
+          <div>  
+              <pre class="item" readonly><code class="<%= arr[x][1][0] %> codefont"><%= arr[x][0] %></code></pre>
+          </div>
+        </div>
+    <% } %>
+  <% } %>
+<% } else { %>
+    <h2 class="pt-5" style="color:white;">No users yet!</h2>
+<% } %>
